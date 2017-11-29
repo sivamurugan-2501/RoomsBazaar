@@ -1,87 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>	
-		<meta charset="utf-8"> 
-		<title>Online Portal</title>
+<!Doctype HTML>
+<html>
+	<head>
+			<link href="assets/css/libs/bootstrap.min.css" rel="stylesheet">
+			<script type="text/javascript" src="assets/js/libs/jquery-3.2.1.min"></script>
+			<script type="text/javascript" src="assets/js/libs/bootstrap.min.js"></script>
+			<style>
+				body{
+					background:  #ffffff;
+					font-family: 'Calibri'
+				}
+				nav{
+					background: url(assets/images/navbar-menu.png) !important;
+					border-bottom: 4px solid #9c9c9c
+				}
+				nav ul{
+					list-style: none !important;
+				    list-style-type: none !important;
+				    width: 100% !important;
+				    display: block !important;
+				    padding: 0 150px !important;
+				}
+				nav ul li{
+					float: 	left; !important;
+				    color: #FFF !important;
+				    text-align: center !important;
+				    padding: 0 16px !important;
+				    text-decoration: none !important;
+				    padding-right: 20px !important;
+   					padding-left: 20px !important;
+   					margin: 0 5px !important;
+   					font-weight: 500;
+				}
+				.nav-container{
+					background: url(assets/images/navbar-menu.png);
+				    padding-left: 10%;
+				    padding-right: 10%;
+				}
 
-		<!-- angularJS1 script  -->
-		<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+				nav ul li a{
+					color : #fff !important;
+					text-transform: uppercase;
+				}
 
-		<!-- Bootstrap latest CDN -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+				nav ul li.active{
+					color: #000000 !important;
+				    background: #ededed;
+				}
 
-		<!-- jQuery library CDN -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+				nav ul li.active a{
+					color :#000000 !important;
+				}
 
-		<!-- Latest compiled Bootstrap JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<style>
-			.menu-nav{
-				background :  #0089c0;
-			}
-			.logo-div a{
-				color : #e2ffff !important	;
-				text-transform:  uppercase;
-			}
+				nav ul li:hover, nav ul li a:hover{
+				    background: #ededed;
+				    color: #000000 !important;
+				}
 
-			ul.menu-ul{
-				float:right :important;
-			}
-			ul.menu-ul li a{
-				color : #e2ffff !important;
-				padding: 15px 25px !important;
-			}
+				nav ul li:hover a{
+				    color: #000000 !important;
+				    text-decoration: none !important;
+				}
 
-			ul.menu-ul li a span{
-				display: inline-block;
-				padding-bottom: 2px;
-				border-bottom: 2px solid #0089c0;
-			}
+				.navbar{
+					padding: 0.8rem 1rem 0rem  !important;
+				}
 
-			ul.menu-ul li a span:hover {
-				 transition: 0.3s ease;
-				border-bottom : 2px solid #e2ffff;
-			}
+				#main{
+					padding: 0rem 8rem 0rem  !important;
+				}
+				#header{
+					padding: 22px 7em;
+				}
+				#header .logo img{
+					width :200px;
+				}
+				#header img{
+					margin-right: -4px !important;
+				}
+				#header .sign img.sign-up{
+					width: 99px;
+				}
+				#header .sign img.sign-in{
+					width: 83px;
+				}
 
-			ul.menu-ul li.active a span {
-				 transition: 0.3s ease;
-				border-bottom : 2px solid #e2ffff !important;
-			}
+				#content{
+					padding: 0 3.5em;
+				}
+				#content .slider{
+					border-top:6px solid #333333;
+				}
 
-			div.banner {
-				background-image : url('images/background.jpg');
-				background-size: cover;
-				width : 100%;
-				height : 600px;
-			}
+				#content .slider img{
+					width :100%;
+				}
 
-			.navbar {
-				margin-bottom : 0 !important;
-			}
+				#search-box-holder{
+					background: rgba(0, 0, 0, 0.76);
+				    position: absolute;
+				    width: 97%;
+				    height: 130px;
+				    padding: 1em 2.5em;
+				}
 
-			.navbar-default .navbar-nav>.active a{
-				background :  #0089c0 !important; 
-			}
-		</style>
+				#search-box-holder .heading{
+					text-align: center;
+				    color: #FFF;
+				    padding: 0px 0 10px !important;
+				    font-size: 18px;
+				}
+
+				div#search-box-holder .quick-search-box {
+					width: 85%;
+				    height: 35px;
+				    background: #fff;
+				    margin: 0 65px;
+				    position: static;
+				}
+
+				div#search-box-holder .quick-search-box .icon{
+					float: left;
+    				padding: 3px 5px;
+				}
+				div#search-box-holder .quick-search-box .icon img{
+					width: 20px;
+				}
+
+				div#search-box-holder .quick-search-box .input-box{
+					float: left;
+   					padding: 0px 0;
+   						width: 45%;
+				}
+
+				div#search-box-holder .quick-search-box .input-box input{
+					height: 35px;
+					border: none;
+				}
+
+				#property-list-outer{
+					padding: 5px 15px;
+				}
+
+				#property-list-outer div.property-list-inner{
+					padding: 2px 30px;
+				    border-right: 1px solid #efefef;
+				   /* background: url('assets/images/tab-bg.jpg') */
+				}
+
+				#property-list-outer div.property-list-inner:last-child{
+					border-right : 1px solid #ffffff;
+				}
+
+				#property-list-outer .property-list-inner .title{
+					text-align: center;
+				    font-weight: 600;
+				    font-size: 18px;
+				    margin-bottom: 8px;
+				}
+
+				#property-list-outer .property-list-inner .information-box{
+			 		padding: 10px 5px;
+				}
+
+				#property-list-outer .property-list-inner .information-box .pro-name{
+					color: #d92561;
+				    font-weight: 600;
+				    text-transform: uppercase;
+				    text-align: center;
+				}
+
+			</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-default menu-nav">
-		  <div class="container-fluid menu-outer-div">
-		    <div class="navbar-header logo-div">
-		      <a class="navbar-brand" href="#">Property Zone</a>
-		    </div>
-		    <ul class="nav navbar-nav menu-ul" style="float:right">
-		      <li class="active"><a href="#"><span>PG</span></a></li>
-		      <li><a href="#"><span>BUY</span></a></li>
-		      <li><a href="#"><span>SELL</span></a></li>
-		      <li><a href="#"><span>RENT</span></a></li>
-		    </ul>
-		  </div>
-		</nav>
-
-		<div class="banner">
-
+		<!-- Navigation menu starts -->
+		<div class="container-fluid nav-container">
+			<nav class="navbar navbar-default">
+			   <div class="nav-holder">
+				   <ul class="nav navbar-nav">
+				      <li class="active"><a href="#">Home</a></li>
+				      <li><a href="#">Paying Guest</a></li>
+				      <li><a href="#">Buy</a></li>
+				      <li><a href="#">Sell</a></li>
+				      <li><a href="#">New Projects</a></li>
+				      <li><a href="#">CUSTOMER SERVICE</a></li>
+				    </ul>
+				</div>
+			</nav>
 		</div>
+		<!-- Navigation menu ends -->
+
+		
+		<div class="container-fluid" id="main" style="">
+			<!-- Header Div -->
+			<div class="row" id="header" style="">
+				<div class="col-md-5 logo">
+					<img src="assets/images/logo.jpg">
+				</div>
+				<div class="col-md-4">
+					<img src="assets/images/facebook.jpg">
+					<img src="assets/images/twitter.jpg">
+					<img src="assets/images/google-plus.jpg">
+					<img src="assets/images/in.jpg">
+				</div>
+				<div class="col-md-3 sign">
+					<img src="assets/images/signup.jpg" class="sign-in">
+					<img src="assets/images/login.jpg" class="sign-up">
+				</div>
+			</div>
+			<!-- Header Ends -->
+
+			<!-- Main Content Starts -->
+			<div class="row" id="content">
+				<div class="col-md-12">
+					<div id="search-box-holder">
+						<div class="heading">
+							INDIA'S FIRST PAYING GUEST SPEACLIZED PROPERTY SEARCH
+						</div>
+						<div class="quick-search-box">
+							<form>
+								<div class="icon">
+									<img src="assets/images/location-popup.png">
+								</div>
+								<div class="input-box">
+									<input type="text" class="form-control" placeholder="Location, Property name">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="slider">
+						<img src="assets/images/slide01.jpg">
+					</div>
+					<!--div class="clear">&nbsp;</div-->
+
+					<div class="row" id="property-list-outer">
+						<div class="col-md-4 property-list-inner">
+							<div class="title">PAYING GUEST</div>
+							<img src="assets/images/paying-guest.jpg">
+							<div class="information-box">
+								<div class="pro-name">
+									Kalpataru Apartments
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 property-list-inner">
+							<div class="title">HOT PROPERTIES</div>
+							<img src="assets/images/new-projects.jpg">
+							<div class="information-box">
+								<div class="pro-name">
+									Kalpataru Apartments
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 property-list-inner">
+							<div class="title">NEW PROJECTS</div>
+							<img src="assets/images/rentandsale.jpg">
+							<div class="information-box">
+								<div class="pro-name">
+									Kalpataru Apartments
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Main Content Ends -->
+		</div> 
 		
 	</body>
 </html>
