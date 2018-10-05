@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatInput} from '@angular/material';
 
 
 export interface DialogData {
@@ -17,10 +17,11 @@ export class UserSignSignupComponent {
 
   animal: string;
   name: string;
-
-  constructor(public dialog: MatDialog) {}
+  public dialog:MatDialog;
+  constructor(public dialog1: MatDialog) {}
 
   openDialog(): void {
+    console.log(this.dialog);
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '250px',
       data: {name: this.name, animal: this.animal}

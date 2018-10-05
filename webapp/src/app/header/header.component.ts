@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
   }
 
   signin(){
-    
     this.obj.openDialog();
   }
 

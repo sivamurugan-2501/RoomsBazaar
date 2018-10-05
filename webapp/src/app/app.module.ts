@@ -10,12 +10,14 @@ import { SliderWithFilterComponent } from './slider-with-filter/slider-with-filt
 import { HomePropertyListingComponent } from './home-property-listing/home-property-listing.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { UserSignSignupComponent } from './user-sign-signup/user-sign-signup.component';
+import {MatInputModule, MatButtonModule } from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SliderWithSearchComponent,
+    SliderWithSearchComponent,  
     MenuComponent,
     SliderWithFilterComponent,
     HomePropertyListingComponent,
@@ -24,6 +26,9 @@ import { UserSignSignupComponent } from './user-sign-signup/user-sign-signup.com
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatFormFieldModule,
     AppRoutingModule
   ],
   providers: [],
