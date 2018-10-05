@@ -1,9 +1,11 @@
 <!Doctype HTML>
 <html>
 	<head>
+			<title>Property Portal</title>
 			<link href="assets/css/libs/bootstrap.min.css" rel="stylesheet">
 			<script type="text/javascript" src="assets/js/libs/jquery-3.2.1.min"></script>
-			<script type="text/javascript" src="assets/js/libs/bootstrap.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 			<style>
 				body{
 					background:  #ffffff;
@@ -169,6 +171,15 @@
 				    text-align: center;
 				}
 
+				#property-list-outer .property-list-inner .information-box .pro-details{
+					font-weight:600;
+					text-align : center;
+				}
+
+				#property-list-outer .property-list-inner .information-box .pro-details .other{
+					font-weight: 500
+				}
+
 			</style>
 	</head>
 	<body>
@@ -230,33 +241,78 @@
 					<div class="slider">
 						<img src="assets/images/slide01.jpg">
 					</div>
-					<!--div class="clear">&nbsp;</div-->
+					<div class="clear">&nbsp;</div>
 
 					<div class="row" id="property-list-outer">
 						<div class="col-md-4 property-list-inner">
-							<div class="title">PAYING GUEST</div>
+							<div class="title"><img src="assets/images/paying-guest.png" style="width:28px">&nbsp;PAYING GUEST</div>
 							<img src="assets/images/paying-guest.jpg">
 							<div class="information-box">
 								<div class="pro-name">
 									Kalpataru Apartments
 								</div>
+								<div class="pro-details">
+									<div> 
+										 <span class="fa fa-map-marker"></span>
+										 Mumbai
+									</div>
+									<div class="other">
+										2 BHK, 2 Bathrooms, 1st Floor
+									</div>
+									<div class="other">
+										4 Members Sharing 
+									</div>
+									<div class="pro-price">
+										<span class="fa fa-rupee"> 20,000 
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="col-md-4 property-list-inner">
-							<div class="title">HOT PROPERTIES</div>
+							<div class="title"><img src="assets/images/properties.png" style="width:28px">&nbsp;HOT PROPERTIES</div>
 							<img src="assets/images/new-projects.jpg">
 							<div class="information-box">
 								<div class="pro-name">
 									Kalpataru Apartments
 								</div>
+								<div class="pro-details">
+									<div> 
+										 <span class="fa fa-map-marker"></span>
+										 Mumbai
+									</div>
+									<div class="other">
+										2 BHK, 2 Bathrooms,  1st Floor
+									</div>
+									<div class="other">
+										1000 SQ FT
+									</div>
+									<div class="pro-price">
+										<span class="fa fa-rupee"> 20,000 
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="col-md-4 property-list-inner">
-							<div class="title">NEW PROJECTS</div>
+							<div class="title"><img src="assets/images/new-project.png" style="width:28px">&nbsp;NEW PROJECTS</div>
 							<img src="assets/images/rentandsale.jpg">
 							<div class="information-box">
 								<div class="pro-name">
 									Kalpataru Apartments
+								</div>
+								<div class="pro-details">
+									<div> 
+										 <span class="fa fa-map-marker"></span>
+										 Mumbai
+									</div>
+									<div class="other">
+										2 BHK 2 Bathrooms  1st Floor
+									</div>
+									<div class="other">
+										1000 SQ FT 
+									</div>
+									<div class="pro-price">
+										<span class="fa fa-rupee"> 20,000 
+									</div>
 								</div>
 							</div>
 						</div>
