@@ -9,9 +9,10 @@ import { MenuComponent } from './menu/menu.component';
 import { SliderWithFilterComponent } from './slider-with-filter/slider-with-filter.component';
 import { HomePropertyListingComponent } from './home-property-listing/home-property-listing.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { UserSignSignupComponent } from './user-sign-signup/user-sign-signup.component';
-import {MatInputModule, MatButtonModule } from '@angular/material';
+import {MatInputModule, MatButtonModule, MatDialogModule, MatCardModule } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { UserSignSignupDialog } from './user-sign-signup/user-sign-signup.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MenuComponent,
     SliderWithFilterComponent,
     HomePropertyListingComponent,
-    UserSignSignupComponent
+    UserSignSignupDialog
   ],
   imports: [
     BrowserModule,
@@ -29,9 +30,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
-    AppRoutingModule
+    MatDialogModule,
+    AppRoutingModule,
+    MatCardModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UserSignSignupDialog]
 })
 export class AppModule { }

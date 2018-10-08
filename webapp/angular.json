@@ -23,12 +23,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/css/libs/bootstrap.min.css"
+              "src/styles.css"
+              //"src/assets/css/libs/bootstrap.min.css"
             ],
             "scripts": [
-              "src/assets/js/libs/jquery-3.2.1.min.js",
-              "src/assets/js/libs/bootstrap.min.js"
+              "src/assets/js/libs/jquery-3.2.1.min.js"
+              //"src/assets/js/libs/bootstrap.min.js"
             ]
           },
           "configurations": {
