@@ -21,8 +21,10 @@ body{
 				    text-align: center !important;
 				    padding: 0 16px !important;
 				    text-decoration: none !important;
-				    padding-right: 20px !important;
-   					padding-left: 20px !important;
+				    /* padding-right: 20px !important;
+						 padding-left: 20px !important; */
+						 padding-right: 0.5em !important;
+   					padding-left: 0.5em !important;
    					margin: 0 5px !important;
    					font-weight: 500;
 				}
@@ -93,7 +95,7 @@ body{
 				#search-box-holder{
 					background: rgba(0, 0, 0, 0.76);
 				    position: absolute;
-				    width: 97%;
+				    width: 74.4%;
 				    height: 130px;
 				    padding: 1em 2.5em;
 				}
@@ -123,8 +125,8 @@ body{
 
 				div#search-box-holder .quick-search-box .input-box{
 					float: left;
-   					padding: 0px 0;
-   						width: 45%;
+   				padding: 0px 0;
+   				width: 45%;
 				}
 
 				div#search-box-holder .quick-search-box .input-box input{

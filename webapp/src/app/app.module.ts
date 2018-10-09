@@ -11,8 +11,10 @@ import { HomePropertyListingComponent } from './home-property-listing/home-prope
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule, MatButtonModule, MatDialogModule, MatCardModule } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { UserSignSignupDialog } from './user-sign-signup/user-sign-signup.component';
+import { UserSignSignupDialog, UserSignSignupComponent } from './user-sign-signup/user-sign-signup.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HomeSliderListingComponent } from './home-slider-listing/home-slider-listing.component';
+import { PropertyListingComponent } from './property-listing/property-listing.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     MenuComponent,
     SliderWithFilterComponent,
     HomePropertyListingComponent,
-    UserSignSignupDialog
+    UserSignSignupComponent,
+    HomeSliderListingComponent,
+    PropertyListingComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [UserSignSignupDialog]
+  entryComponents: [UserSignSignupComponent]
 })
 export class AppModule { }

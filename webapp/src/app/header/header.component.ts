@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserSignSignupDialog  } from "./../user-sign-signup/user-sign-signup.component" ;
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {  NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -8,44 +9,29 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  matDialog:MatDialog;
-  obj = new UserSignSignupComponent(this.matDialog);
-  constructor(public dialog: MatDialog) { }
-  animal: string;
-  name: string;
-  loginPopopWidth :75;
+  //matDialog:MatDialog;
+  //obj = new UserSignSignupComponent(this.matDialog);
+  
+  //modalService:NgbModal;
+  
+  constructor(public dialog: MatDialog, private modalService: NgbModal) { }
+  
 
   ngOnInit() {
   }
 
   signin(){
-    this.openDialog();
-  }
-
-  openDialog(): void {
-    console.log(this.dialog);
-    const dialogRef = this.dialog.open(UserSignSignupDialog, {
-      width: this.loginPopopWidth+"%",
-      data: {name: this.name, animal: this.animal}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
+    let signInModal = new UserSignSignupDialog(this.modalService);
+    signInModal.open(); 
   }
 
 }
 
-
+/*
 @Component({
   selector: 'app-user-sign-signup',
 })
 export class UserSignSignupComponent {
-
-  
   public dialog:MatDialog;
   constructor(public dialog1: MatDialog) {}
-
-  
-}
+}*/
