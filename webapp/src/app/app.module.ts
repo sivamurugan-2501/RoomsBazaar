@@ -15,6 +15,7 @@ import { UserSignSignupDialog, UserSignSignupComponent } from './user-sign-signu
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeSliderListingComponent } from './home-slider-listing/home-slider-listing.component';
 import { PropertyListingComponent } from './property-listing/property-listing.component';
+import { FilerBoxComponent } from './filer-box/filer-box.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PropertyListingComponent } from './property-listing/property-listing.co
     HomePropertyListingComponent,
     UserSignSignupComponent,
     HomeSliderListingComponent,
-    PropertyListingComponent
+    PropertyListingComponent,
+    FilerBoxComponent
   ],
   imports: [
     BrowserModule,
