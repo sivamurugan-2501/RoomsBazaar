@@ -16,6 +16,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeSliderListingComponent } from './home-slider-listing/home-slider-listing.component';
 import { PropertyListingComponent } from './property-listing/property-listing.component';
 import { FilerBoxComponent } from './filer-box/filer-box.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FilerBoxComponent } from './filer-box/filer-box.component';
     MatDialogModule,
     AppRoutingModule,
     MatCardModule,
+    FormsModule,
     NgbModule
   ],
   providers: [],
