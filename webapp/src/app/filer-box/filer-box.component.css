@@ -10,5 +10,17 @@
     margin-bottom: 15px;
     padding-bottom: 20px;
     border-bottom: 1px solid #efefef;
+    float: left;
+    width: 100%;
+}
+
+.filter-box .group:last-child{
+    border:none !important;
+}
+
+.filter-box .group .form-inline{
+    float: left;
+    display: block ;
+    width:   100%;
 }
 

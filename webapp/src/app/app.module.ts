@@ -18,6 +18,8 @@ import { PropertyListingComponent } from './property-listing/property-listing.co
 import { FilerBoxComponent } from './filer-box/filer-box.component';
 import { FormsModule } from '@angular/forms';
 
+import { Ng5SliderModule } from 'ng5-slider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     MatCardModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    Ng5SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

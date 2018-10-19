@@ -1,7 +1,7 @@
 <div  class="filter-box">
     <form class="" action=""  #f="ngForm">
       <div class="group">
-        <label class="d-block default" for="opt_sort">Sort</label>
+        <label class="d-block default" for="opt_sort">SORT</label>
         <select class="form-control default" id="opt_sort" name="opt_sort">
           <option *ngFor="let sortdata of sortOptions" value={{sortdata.value}}> {{sortdata.label}} </option>
         </select>
@@ -14,12 +14,27 @@
         </label>
         &nbsp;
         <label class="btn-primary as-checkbox" ngbButtonLabel>
-            <input type="checkbox" id="a2" name="a2" ngbButton [(ngModel)]="model.left"> 2 BHK
+            <input type="checkbox" id="a2" name="a1" ngbButton [(ngModel)]="model.left"> 2 BHK
         </label>
         &nbsp;
         <label class="btn-primary as-checkbox" ngbButtonLabel>
-            <input type="checkbox" id="a3" name="a3" ngbButton [(ngModel)]="model.left"> 3 BHK
+            <input type="checkbox" id="a3" name="a1" ngbButton [(ngModel)]="model.left"> 3 BHK
         </label>
+      </div>
+
+      <div class="group">
+          <label class="d-block default" for="">BUDEGT</label>
+          
+          <!--ng5-slider [(value)]="filterData.budget_low_value" [options]="budgetSliderOptions"></ng5-slider>
+          <ng5-slider [(value)]="filterData.budget_high_value" [options]="budgetSliderOptions"></ng5-slider-->
+          <div class="form-inline">
+            <select class="form-control default pull-left" id="opt_budget_min" name="opt_budget_min">
+                <option *ngFor="let budOpt1 of filterData.budget_option_min" value={{budOpt1.value}}> {{budOpt1.label}} </option>
+            </select>
+            <select class="form-control default pull-right" id="opt_budget_max" name="opt_budget_max">
+                <option *ngFor="let budOpt2 of filterData.budget_option_max" value={{budOpt2.value}}> {{budOpt2.label}} </option>
+            </select>
+          </div>
       </div>
 
       <!--div ngbDropdown class="d-clearblock">

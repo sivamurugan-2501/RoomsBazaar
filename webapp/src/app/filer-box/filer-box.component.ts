@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FilterModel } from './../skeletion/filter-schema';
+import { Options } from 'ng5-slider';
+import { FILTER_DATA } from './../skeletion/sample-data';
 
 @Component({
   selector: 'app-filer-box',
@@ -10,15 +12,26 @@ export class FilerBoxComponent implements OnInit {
 
   
   sortOptions:Array<Object>;
-  filterData:FilterModel = {option_sort_data: this.sortOptions};
+  filterData:FilterModel = {  
+                              option_sort_data: FILTER_DATA.sortOptions,
+                              budget_option_min: FILTER_DATA.budgetOptions_min,
+                              budget_option_max: FILTER_DATA.budgetOptions_max,
+                              availability_options: [{}]
+                           };
+                          
   
+  /*
+  # Config for using ng5 slider                         
+  budgetSliderOptions: Options={
+      floor: this.filterData.budget_low_value,
+      ceil: this.filterData.budget_high_value,
+      ariaLabel: "Lakhs"
+  }*/
+    
 
   constructor() { 
-    this.sortOptions = [
-      { label: 'Latest', value: 1},
-      { label: 'Low Price', value: 2},
-      { label: 'High Price', value: 3}
-    ];
+    this.sortOptions = FILTER_DATA.sortOptions
+
   }
 
   model = {
