@@ -18,7 +18,31 @@ import { PropertyListingComponent } from './property-listing/property-listing.co
 import { FilerBoxComponent } from './filer-box/filer-box.component';
 import { FormsModule } from '@angular/forms';
 
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from "angular5-social-login";
+
 import { Ng5SliderModule } from 'ng5-slider';
+
+
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+      [
+        /* {
+          id: FacebookLoginProvider.PROVIDER_ID,
+          provider: new FacebookLoginProvider("Your-Facebook-app-id")
+        }, */
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider("390169105820-2aovlfpepl0vm778hbpcqn7706v7t800.apps.googleusercontent.com")
+        },
+      ]
+  );
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -44,9 +68,15 @@ import { Ng5SliderModule } from 'ng5-slider';
     MatCardModule,
     FormsModule,
     NgbModule,
-    Ng5SliderModule
+    Ng5SliderModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    {
+     provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [UserSignSignupComponent]
 })

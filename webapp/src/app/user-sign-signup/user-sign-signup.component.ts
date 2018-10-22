@@ -1,7 +1,11 @@
 import { Component, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import {
+  AuthService,
+  FacebookLoginProvider,
+  GoogleLoginProvider
+} from 'angular5-social-login';
 
 export interface DialogData {
   animal: string;
@@ -15,7 +19,23 @@ export interface DialogData {
   styleUrls: ['./user-sign-signup.component.css']
 })
 export class UserSignSignupComponent {
-  constructor(public activeModal: NgbActiveModal) {}
+  constructor(public activeModal: NgbActiveModal, private socialAuthService: AuthService) {}
+
+  socialSignIn(socialPlatform : string) {
+    let socialPlatformProvider;
+    if(socialPlatform == "facebook"){
+      socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
+    }else if(socialPlatform == "google"){
+      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+    }
+    
+    this.socialAuthService.signIn(socialPlatformProvider).then(
+      (userData) => {
+        alert(userData);
+        console.log(socialPlatform+" sign in data : " , userData);
+      }
+    );
+  }
 }
 
 @Component({
@@ -24,12 +44,15 @@ export class UserSignSignupComponent {
   styles: ['./user-sign-signup.component.css']
 })
 export class UserSignSignupDialog{
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private socialAuthService: AuthService ) {}
 
   open() {
     const modalRef = this.modalService.open(UserSignSignupComponent);
     //modalRef.componentInstance.name = 'World';
   }
+
+
+  
 }
 
 /*export class UserSignSignupDialog {

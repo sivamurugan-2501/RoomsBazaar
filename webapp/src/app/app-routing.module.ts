@@ -18,6 +18,20 @@ const routes: Routes =[
       {
         path: 'property-listing',
         component: PropertyListingComponent
+      },
+      {
+        path: 'buy',
+        component: PropertyListingComponent
+      },
+      
+      {
+        path: 'pg',
+        component: PropertyListingComponent
+      },
+      
+      {
+        path: 'rent',
+        component: PropertyListingComponent
       }
     ]
   }

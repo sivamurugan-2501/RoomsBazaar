@@ -31,5 +31,13 @@ export const FILTER_DATA= {
         {label: "75 Lakhs", value:9 },
         {label: "1 Crore", value:10 },
         {label: "Above 1 Crore", value:11 }
+    ],
+    
+    location_list: [
+        {value:1, name: 'Mumbai'},
+        {value:2, name: 'Bangalore'},
+        {value:3, name: 'Thane'},
+        {value:4, name: 'Navi Mumbai'},
+        {value:5, name: 'Chennai'}
     ]
 }

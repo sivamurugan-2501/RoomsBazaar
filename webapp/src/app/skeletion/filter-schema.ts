@@ -5,4 +5,5 @@ export interface FilterModel {
     budget_option_min?: Array<Object>;
     budget_option_max?: Array<Object>;
     availability_options: Array<Object>;
+    location_list: Array<Object>;
 }

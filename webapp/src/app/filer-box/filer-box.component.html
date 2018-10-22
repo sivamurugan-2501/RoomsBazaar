@@ -37,6 +37,25 @@
           </div>
       </div>
 
+      <div class="group">
+          <label class="d-block default" for="">AVAILABILITY</label>
+          <div class="form-inline">
+
+            <input type="checkbox" class="form-control" name="opt_availability" value=1> New 
+            <input type="checkbox" class="form-control" name="opt_availability" value=2> Resale 
+          </div>
+      </div>
+
+      <div class="group">
+          <label class="d-block default" for="">LOCATION</label>
+          <div class="form-inline">
+              
+              <div *ngFor="let budOpt1 of filterData.location_list">
+              <input type="checkbox"  value={{budOpt1.value}}>{{budOpt1.name}}
+              </div>
+          </div>
+      </div>
+
       <!--div ngbDropdown class="d-clearblock">
         <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Latest</button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">

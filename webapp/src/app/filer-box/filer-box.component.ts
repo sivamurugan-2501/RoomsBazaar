@@ -16,7 +16,8 @@ export class FilerBoxComponent implements OnInit {
                               option_sort_data: FILTER_DATA.sortOptions,
                               budget_option_min: FILTER_DATA.budgetOptions_min,
                               budget_option_max: FILTER_DATA.budgetOptions_max,
-                              availability_options: [{}]
+                              availability_options: [{}],
+                              location_list: FILTER_DATA.location_list
                            };
                           
   
