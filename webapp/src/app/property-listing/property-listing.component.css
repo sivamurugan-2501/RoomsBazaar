@@ -34,3 +34,16 @@
     color: #034ea2;
     font-weight: 600;
 }
+
+.pro-row .pro-posted_date{
+    text-align: center;
+    font-size:10px
+}
+
+
+.wishlist{
+    font-size: 16px;
+    cursor: pointer;
+    color:#F44336;
+    vertical-align: middle;
+}

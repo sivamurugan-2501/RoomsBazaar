@@ -338,3 +338,7 @@
 					label.default{
 						font-size:12px;
 					}
+
+					input[type="checkbox"]{
+						vertical-align: middle;
+					}
