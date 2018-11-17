@@ -6,6 +6,7 @@ import { SliderWithFilterComponent } from './slider-with-filter/slider-with-filt
 import { HomePropertyListingComponent } from './home-property-listing/home-property-listing.component';
 import { HomeSliderListingComponent } from './home-slider-listing/home-slider-listing.component';
 import { PropertyListingComponent } from './property-listing/property-listing.component';
+import { PropertyViewComponent } from './property-view/property-view.component';
 
 const routes: Routes =[
   {
@@ -32,6 +33,10 @@ const routes: Routes =[
       {
         path: 'rent',
         component: PropertyListingComponent
+      },
+      {
+        path: 'property-view',
+        component: PropertyViewComponent
       }
     ]
   }

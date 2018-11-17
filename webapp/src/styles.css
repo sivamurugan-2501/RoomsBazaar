@@ -17,7 +17,8 @@
 				}
 
 				nav{
-					background: url(assets/images/navbar-menu.png) !important;
+					/*background: url(assets/images/navbar-menu.png) !important;*/
+					background: #3F51B5;
 					border-bottom: 4px solid #9c9c9c
 				}
 
@@ -44,7 +45,8 @@
    					font-weight: 500;
 				}
 				.nav-container{
-						background: url(assets/images/navbar-menu.png);
+						/*background: url(assets/images/navbar-menu.png);*/
+						background: #3F51B5;
 						margin-bottom: 10px;
 				    /*padding-left: 10% !important;
 				    padding-right: 10% !important;*/

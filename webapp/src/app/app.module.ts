@@ -18,6 +18,8 @@ import { PropertyListingComponent } from './property-listing/property-listing.co
 import { FilerBoxComponent } from './filer-box/filer-box.component';
 import { FormsModule } from '@angular/forms';
 
+import {MatTabsModule} from '@angular/material/tabs'
+
 import {
   SocialLoginModule,
   AuthServiceConfig,
@@ -26,6 +28,7 @@ import {
 } from "angular5-social-login";
 
 import { Ng5SliderModule } from 'ng5-slider';
+import { PropertyViewComponent } from './property-view/property-view.component';
 
 
 export function getAuthServiceConfigs() {
@@ -55,15 +58,13 @@ export function getAuthServiceConfigs() {
     UserSignSignupComponent,
     HomeSliderListingComponent,
     PropertyListingComponent,
-    FilerBoxComponent
+    FilerBoxComponent,
+    PropertyViewComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatDialogModule,
+    MatTabsModule,
     AppRoutingModule,
     MatCardModule,
     FormsModule,
