@@ -1,0 +1,13 @@
+#footer{
+    /*background : #353333;*/
+    height:60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: -2px 4px 11px #1b2027;
+}
+
+#footer .content{
+    padding : 0.8rem 2.5rem 0rem  !important
+}

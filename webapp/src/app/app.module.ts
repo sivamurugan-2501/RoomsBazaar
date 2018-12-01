@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -29,6 +30,7 @@ import {
 
 import { Ng5SliderModule } from 'ng5-slider';
 import { PropertyViewComponent } from './property-view/property-view.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 export function getAuthServiceConfigs() {
@@ -59,9 +61,11 @@ export function getAuthServiceConfigs() {
     HomeSliderListingComponent,
     PropertyListingComponent,
     FilerBoxComponent,
-    PropertyViewComponent
+    PropertyViewComponent,
+    FooterComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatTabsModule,

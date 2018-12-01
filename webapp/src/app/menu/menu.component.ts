@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
+
 import {
   AuthService,
   FacebookLoginProvider,
@@ -14,13 +16,13 @@ import { UserSignSignupDialog  } from "./../user-sign-signup/user-sign-signup.co
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private modalService: NgbModal,private socialAuthService: AuthService) { }
+  constructor(private modalService: NgbModal,private socialAuthService: AuthService, private route:Router) { }
 
   ngOnInit() {
   }
 
   signin(){
-    let signInModal = new UserSignSignupDialog(this.modalService,this.socialAuthService);
+    let signInModal = new UserSignSignupDialog(this.modalService,this.socialAuthService, this.route);
     signInModal.open(); 
   }
 

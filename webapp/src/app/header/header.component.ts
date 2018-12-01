@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserSignSignupDialog  } from "./../user-sign-signup/user-sign-signup.component" ;
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {  NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import  { Router } from '@angular/router';
+
 import {
   AuthService,
   FacebookLoginProvider,
@@ -19,14 +21,14 @@ export class HeaderComponent implements OnInit {
   
   //modalService:NgbModal;
   
-  constructor(public dialog: MatDialog, private modalService: NgbModal,private socialAuthService: AuthService) { }
+  constructor(public dialog: MatDialog, private modalService: NgbModal,private socialAuthService: AuthService, private route: Router) { }
   
 
   ngOnInit() {
   }
 
   signin(){
-    let signInModal = new UserSignSignupDialog(this.modalService,this.socialAuthService);
+    let signInModal = new UserSignSignupDialog(this.modalService,this.socialAuthService, this.route);
     signInModal.open(); 
   }
 

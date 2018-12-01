@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-property-listing',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyListingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
+  }
+
+  view_property(prop_id){
+    this.route.navigate(["property-view"]);
   }
 
 }

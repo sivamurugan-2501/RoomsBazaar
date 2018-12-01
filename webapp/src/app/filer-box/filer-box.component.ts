@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FilterModel } from './../skeletion/filter-schema';
+import { FilterModel } from './../skeleton/filter-schema';
 import { Options } from 'ng5-slider';
-import { FILTER_DATA } from './../skeletion/sample-data';
+import { FILTER_DATA } from './../skeleton/sample-data';
 
 @Component({
   selector: 'app-filer-box',

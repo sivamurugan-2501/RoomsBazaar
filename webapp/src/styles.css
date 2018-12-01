@@ -18,7 +18,7 @@
 
 				nav{
 					/*background: url(assets/images/navbar-menu.png) !important;*/
-					background: #3F51B5;
+					background: #007bff;
 					border-bottom: 4px solid #9c9c9c
 				}
 
@@ -46,7 +46,7 @@
 				}
 				.nav-container{
 						/*background: url(assets/images/navbar-menu.png);*/
-						background: #3F51B5;
+						background: #007bff;
 						margin-bottom: 10px;
 				    /*padding-left: 10% !important;
 				    padding-right: 10% !important;*/

@@ -1,6 +1,7 @@
 .pro-row{
     padding: 1.5em 1em 0.5em;
     border-bottom: 1px solid #efefef;
+    cursor:pointer;
 }
 
 .pro-row:last-child{
