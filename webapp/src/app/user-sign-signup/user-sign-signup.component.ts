@@ -23,7 +23,9 @@ export interface DialogData {
   templateUrl: './user-sign-signup.component.html',
   styleUrls: ['./user-sign-signup.component.css']
 })
+
 export class UserSignSignupComponent {
+  
   user_details:LoginUser = {
     username: null,
     password: null,
@@ -59,7 +61,7 @@ export class UserSignSignupComponent {
 
 @Component({
   selector: 'app-user-sign-signup-dialog',
-  templateUrl: 'user-sign-signup.component.html',
+  templateUrl: 'user-sign-signup.component1.html',
   styles: ['./user-sign-signup.component.css']
 })
 export class UserSignSignupDialog{

@@ -62,7 +62,8 @@ export function getAuthServiceConfigs() {
     PropertyListingComponent,
     FilerBoxComponent,
     PropertyViewComponent,
-    FooterComponent
+    FooterComponent,
+    UserSignSignupDialog
   ],
   imports: [
     HttpClientModule,
