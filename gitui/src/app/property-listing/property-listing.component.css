@@ -1,0 +1,50 @@
+.pro-row{
+    padding: 1.5em 1em 0.5em;
+    border-bottom: 1px solid #efefef;
+    cursor:pointer;
+}
+
+.pro-row:last-child{
+    border:none !important;
+}
+
+.pro-row .pro-image img{
+    width:150px;
+}
+
+.pro-row .pro-right{
+    padding: 15px 4em;
+}
+
+.pro-row .pro-title{
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.pro-row .pro-sub-title{
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 10px
+}
+.pro-row .pro-details{
+    font-weight: 600;
+}
+.pro-row .pro-details .pro-price{
+    color: #034ea2;
+    font-weight: 600;
+}
+
+.pro-row .pro-posted_date{
+    text-align: center;
+    font-size:10px
+}
+
+
+.wishlist{
+    font-size: 16px;
+    cursor: pointer;
+    color:#F44336;
+    vertical-align: middle;
+}
